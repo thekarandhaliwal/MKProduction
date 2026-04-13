@@ -1,0 +1,525 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <div class="section pt-0">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="position-relative bg-attach-cover" style="background-image: url('{% static "image/img51.jpg" %}');">
+                    <div class="d-flex flex-column text-white scrollanimation animated fadeInLeft"
+                        style="max-width: 700px;">
+                        <div class="pe-5 pt-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Our</span>
+                        </div>
+                        <div class="pe-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Service</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-xl-row flex-column gap-3 justify-content-between">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Our Service</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-xl-row flex-column gap-5">
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-location"></i>
+                            SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-envelope"></i>
+                            middukheraproduction@gmail.com
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-classic-phone"></i>
+                            +91 8360000717
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Service -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-5">
+                <div class="d-flex flex-column gap-3 justify-content-center align-items-center mx-auto text-center scrollanimation animated zoomIn"
+                    style="max-width: 700px;">
+                    <h3>Explore <span class="brush5">The Service You</span> Need</h3>
+                    <p>Discover a wide range of professional services designed to cater to your specific goals,
+                        delivering quality and excellence every step of the way.</p>
+                </div>
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col mb-4 scrollanimation animated fadeInLeft">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/blog1.jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Sound Mixing</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 scrollanimation animated fadeInRight">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/blog3.jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Voice Recording</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 scrollanimation animated fadeInLeft">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/img32 (1).jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Track Mastering</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 scrollanimation animated fadeInRight">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/img31 (1).jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Audio Editing</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 scrollanimation animated fadeInLeft">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/img51 (1).jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Audio Restoration</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 scrollanimation animated fadeInRight">
+                        <div class="card card-overlay service gap-3">
+                            <div class="card-image overflow-hidden rounded-0 position-relative">
+                                <img src="{% static 'image/img30.jpg' %}" alt="" class="img-fluid w-100">
+                                <div class="position-absolute start-0 bottom-0 p-5 w-100 text-color"
+                                    style="z-index: 2;">
+                                    <h4>Mobile Studio</h4>
+                                    <a href="" class="d-flex flex-row gap-2 align-items-center font-2 text-color">
+                                        <i class="rtmicon rtmicon-arrow-right"></i>
+                                        View Details
+                                    </a>
+                                </div>
+                                <div class="card-body">
+                                    <div
+                                        class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                        <div
+                                            class="d-flex flex-column justify-content-center align-items-center text-center text-color">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section How We Work -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-5">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col col-xl-7 mb-3 scrollanimation animated fadeInLeft">
+                        <h3><span class="brush2">How We Work?</span></h3>
+                    </div>
+                    <div class="col col-xl-5 mb-3 scrollanimation animated fadeInRight">
+                        <div class="d-flex flex-column gap-3">
+                            <p>
+                                We follow a collaborative and transparent approach, ensuring that every step aligns with
+                                your goals, from concept to completion.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-xl-3 row-cols-1">
+                    <div class="col mb-3 scrollanimation animated fadeInLeft">
+                        <div class=" d-flex flex-column gap-3 align-items-center text-center" style="max-width:310px;">
+                            <img src="{% static 'image/notes.png' %}" class="img-fluid w-max-content" alt="">
+                            <h4 class="text-color">Book The Studio</h4>
+                            <p class="m-0">Delivering pristine audio that ensures your tracks sound</p>
+                            <span class="number-text accent-color-3">01</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3 mt-5 scrollanimation animated fadeInDown">
+                        <div class=" d-flex flex-column gap-3 align-items-center text-center" style="max-width:310px;">
+                            <span class="number-text accent-color-3">02</span>
+                            <img src="{% static 'image/users.png' %}" class="img-fluid w-max-content" alt="">
+                            <h4 class="text-color">Get Our Expertise</h4>
+                            <p class="m-0">Access expert guidance to help bring your project vision to life.</p>
+                        </div>
+                    </div>
+                    <div class="col mb-3 scrollanimation animated fadeInRight">
+                        <div class=" d-flex flex-column gap-3 align-items-center text-center" style="max-width:310px;">
+                            <img src="{% static 'image/microphone.png' %}" class="img-fluid w-max-content" alt="">
+                            <h4 class="text-color">Professional Service</h4>
+                            <p class="m-0">Enjoy seamless execution and top-tier service from start to finish.</p>
+                            <span class="number-text accent-color-3">03</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Fasilitation -->
+        <div class="section bg-attach-cover" style="background-image: url('{% static "image/dummy-img-1920x900.jpg" %}');">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                    style="max-width: 600px;">
+                    <h3 class="brush2">Choose Your Studio</h3>
+                    <p>Select the perfect studio space for your project, whether it's for recording, mixing, or
+                        mastering, with options to suit different production styles and needs.</p>
+                </div>
+        <div class="tab-container position-relative">
+
+            <div class="tabs studio">
+                <div class="tab" data-tab="studio-1">Studio 1</div>
+                <div class="tab" data-tab="studio-2">Studio 2</div>
+                <div class="tab active" data-tab="studio-3">Studio 3</div>
+                <div class="tab" data-tab="studio-4">Studio 4</div>
+                <div class="tab" data-tab="studio-5">Studio 5</div>
+                <div class="tab" data-tab="studio-6">Studio 6</div>
+            </div>
+
+            <!-- CONTENT -->
+            <!-- <div class="tab-content studio">
+
+                <div class="content" id="studio-1">
+                    <h4>Studio 1 - Recording</h4>
+                    <button onclick="payStudio(50000, 'Studio 1')">Book</button>
+                </div>
+                <div class="content" id="studio-2">
+                    <h4>Studio 2 - Mixing</h4>
+                    <button onclick="payStudio(75000, 'Studio 2')">Book</button>
+                </div>
+
+                <div class="content active" id="studio-3">
+                    <div class="row">
+                        <div class="col">
+                            <img src="" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <h4>Studio 3 - Mastering</h4>
+                            <p>High-quality mastering studio.</p>
+                            <h5>₹2</h5>
+                            <a href="javascript:void(0)" 
+                                onclick="payStudio(2, 'Studio 3')"
+                                class="btn btn-accent">
+                                Book Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content" id="studio-4">
+                    <h4>Studio 4 - Music</h4>
+                    <button onclick="payStudio(20000, 'Studio 4')">Book</button>
+                </div>
+
+                <div class="content" id="studio-5">
+                    <h4>Studio 5 - Production</h4>
+                    <button onclick="payStudio(55000, 'Studio 5')">Book</button>
+                </div>
+
+            </div> -->
+
+            <div class="tab-content studio">
+
+    <!-- Studio 1 -->
+    <div class="content" id="studio-1">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Studio 1 - Recording</h4>
+                <p>Professional recording studio setup.</p>
+                <h5>₹50000</h5>
+                <a href="javascript:void(0)" 
+                   onclick="payStudio(50000, 'Studio 1')"
+                   class="book-btn">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Studio 2 -->
+    <div class="content" id="studio-2">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Studio 2 - Mixing</h4>
+                <p>Advanced mixing and sound engineering.</p>
+                <h5>₹75000</h5>
+                <a href="javascript:void(0)" 
+                   onclick="payStudio(75000, 'Studio 2')"
+                   class="book-btn">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Studio 3 (DEFAULT ACTIVE) -->
+    <div class="content active" id="studio-3">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Studio 3 - Mastering</h4>
+                <p>High-quality mastering studio.</p>
+                <h5>₹25000</h5>
+                <a href="javascript:void(0)" 
+                   onclick="payStudio(25000, 'Studio 3')"
+                   class="book-btn">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Studio 4 -->
+    <div class="content" id="studio-4">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Studio 4 - Music</h4>
+                <p>Creative music production environment.</p>
+                <h5>₹20000</h5>
+                <a href="javascript:void(0)" 
+                   onclick="payStudio(20000, 'Studio 4')"
+                   class="book-btn">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Studio 5 -->
+    <div class="content" id="studio-5">
+        <div class="row">
+            <div class="col">
+                <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+            </div>
+            <div class="col">
+                <h4>Studio 5 - Production</h4>
+                <p>Full-scale music production studio.</p>
+                <h5>₹55000</h5>
+                <a href="javascript:void(0)" 
+                   onclick="payStudio(55000, 'Studio 5')"
+                   class="book-btn">
+                    Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+<!-- Studio 6 - Custom Budget -->
+<div class="content" id="studio-6">
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'image/img28.jpg' %}" class="img-fluid">
+        </div>
+        <div class="col">
+            <h4>Studio 6 - Custom Booking</h4>
+            <p>Select your budget and book accordingly Call us before booking</p>
+
+            <!-- Range Slider -->
+            <input type="range" 
+                   id="priceRange" 
+                   min="0"
+                   max="400000" 
+                   step="1000" 
+                   value="50000"
+                   oninput="updatePrice(this.value)"
+                   class="form-range">
+
+            <!-- Price Display -->
+            <h5>₹ <span id="priceValue">50000</span></h5>
+
+            <!-- Book Button -->
+            <!-- <a href="javascript:void(0)" 
+               onclick="payCustomStudio()"
+               class="">
+                Book Now
+            </a> -->
+            <a href="javascript:void(0)" 
+                onclick="payCustomStudio()"
+                class="book-btn">
+                    Book Now
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+        </div>
+            </div>
+        </div>
+
+        <!-- Section Counter -->
+        <div class="section">
+            <div class="r-container">
+                <div class="row row-cols-xl-4 row-cols-1 w-100 align-items-center">
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="20" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Professional Staff</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <div class="d-flex flex-row">
+                                    <h3 class="number fw-semibold" data-target="2" data-duration="1000">0
+                                    </h3>
+                                    <h3 class="fw-semibold">K</h3>
+                                </div>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Active Members</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="10" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="15" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Studio Branch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <script>
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function () {
+
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+
+        this.classList.add('active');
+
+        const target = this.getAttribute('data-tab');
+        document.getElementById(target).classList.add('active');
+    });
+});
+
+
+</script>
+<script>
+    function updatePrice(value) {
+        document.getElementById("priceValue").innerText = value;
+    }
+
+    function payCustomStudio() {
+        let amount = document.getElementById("priceRange").value;
+        payStudio(amount, 'Custom Studio');
+    }
+</script>
+{% endblock %}

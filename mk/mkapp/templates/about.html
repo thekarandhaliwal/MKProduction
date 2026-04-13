@@ -1,0 +1,479 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <div class="section pt-0">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="position-relative bg-attach-cover" style="background-image: url('{% static "image/img24.jpg" %}');">
+                    <div class="d-flex flex-column text-white scrollanimation animated fadeInLeft"
+                        style="max-width: 700px;">
+                        <div class="pe-5 pt-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">About</span>
+                        </div>
+                        <div class="pe-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Us</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-xl-row flex-column gap-3 justify-content-between">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-xl-row flex-column gap-5">
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-location"></i>
+                            SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-envelope"></i>
+                            middukheraproduction@gmail.com
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-classic-phone"></i>
+                            +91 8360000717
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section About Us -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-4">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col col-xl-7 mb-3 scrollanimation animated fadeInLeft">
+                        <h3>Your Creative Haven for<span class="brush3">Musical Excellence</span></h3>
+                    </div>
+                    <div class="col col-xl-5 mb-3 scrollanimation animated fadeInRight">
+                        <div class="d-flex flex-column gap-3">
+                            <p>
+                                Welcome to our music studio, designed for musicians to refine their talents,
+                                collaborate,
+                                and elevate their creations with modern facilities in a comfortable space.
+                            </p>
+                            <h5>middukheraproduction@gmail.com</h5>
+                            <div class="social-container gap-3">
+                                <a href="https://www.facebook.com" class="social-item-3">
+                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.twitter.com" class="social-item-3">
+                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                </a>
+                                <a href="https://www.spotify.com" class="social-item-3">
+                                    <i class="fa-brands fa-xs fa-spotify"></i>
+                                </a>
+                                <a href="https://www.instagram.com" class="social-item-3">
+                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                </a>
+                                <a href="https://music.apple.com" class="social-item-3">
+                                    <i class="fa-solid fa-xs fa-music"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col col-xl-7 mb-3">
+                        <div class="d-flex flex-column gap-5">
+                            <img src="{% static 'image/dummy-img-900x500.jpg' %}" class="img-fluid" alt="">
+                            <div class="row row-cols-xl-2 row-cols-1  scrollanimation animated fadeInLeft">
+                                <div class="col mb-3 p-0">
+                                    <div class=" d-flex flex-column gap-3">
+                                        <img src="{% static 'image/logo1.png' %}" class="img-fluid w-max-content" alt="">
+                                        <h4 class="text-color">Best Equipment</h4>
+                                        <p class="m-0">High-quality tools to bring your music vision to life with
+                                            precision.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col mb-3 p-0">
+                                    <div class=" d-flex flex-column gap-3">
+                                        <img src="{% static 'image/logo2.png' %}" class="img-fluid w-max-content" alt="">
+                                        <h4 class="text-color">Sound Quality</h4>
+                                        <p class="m-0">Delivering pristine audio that ensures your tracks sound</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-5 mb-3">
+                        <img src="{% static 'image/dummy-img-600x800.jpg' %}" class="img-fluid w-100" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Counter -->
+        <div class="section">
+            <div class="r-container">
+                <div class="row row-cols-xl-4 row-cols-1 w-100 align-items-center">
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="20" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Professional Staff</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <div class="d-flex flex-row">
+                                    <h3 class="number fw-semibold" data-target="2" data-duration="1000">0
+                                    </h3>
+                                    <h3 class="fw-semibold">K</h3>
+                                </div>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Active Members</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3 border-end border-1 border-accent">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="10" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <div class="d-flex flex-row gap-2 align-items-center">
+                                <h3 class="number fw-semibold" data-target="15" data-duration="1000">0</h3>
+                                <h4 class="accent-color">+</h4>
+                            </div>
+                            <span>Studio Branch</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Services -->
+        <div class="section bg-attach-cover p-0" style="height: 90vh;">
+            <div class="tab-container h-100 position-relative">
+                <div class="tabs h-100">
+                    <div class="tab" data-tab="sound-mixing">
+                        <div class="title-tab">Sound Mixing</div>
+                        <div class="content" id="sound-mixing" style="margin-left: 0;">
+                            <div class="d-flex flex-column gap-2">
+                                <h5 class="accent-color">Sound Mixing</h5>
+                                <p>We balance and enhance your audio tracks for professional quality output.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" data-tab="voice-recording">
+                        <div class="title-tab">Voice Recording</div>
+                        <div class="content" id="voice-recording">
+                            <div class="d-flex flex-column gap-2">
+                                <h5 class="accent-color">Voice Recording</h5>
+                                <p>From narration to vocals, our voice recording services offer a seamless blend of
+                                    advanced
+                                    technology and expert support to meet your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab active" data-tab="track-mastering">
+                        <div class="title-tab">Track Masteringg</div>
+                        <div class="content active" id="track-mastering">
+                            <div class="d-flex flex-column gap-2">
+                                <h5 class="accent-color">Track Mastering</h5>
+                                <p>Get a polished, radio-ready sound with our track mastering services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" data-tab="audio-editing">
+                        <div class="title-tab">Audio Editing</div>
+                        <div class="content" id="audio-editing">
+                            <div class="d-flex flex-column gap-2">
+                                <h5 class="accent-color">Audio Editing</h5>
+                                <p>We clean up and refine your recordings for a crisp and clear audio experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab" data-tab="audio-restoration">
+                        <div class="title-tab">Audio Restoration</div>
+                        <div class="content" id="audio-restoration">
+                            <div class="d-flex flex-column gap-2">
+                                <h5 class="accent-color">Audio Restoration</h5>
+                                <p>Repair and enhance old or damaged audio recordings to restore their original quality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background-container" style="background-image: url('{% static "image/dummy-img-1920x900-2.jpg" %}');">
+                    <div class="bg-images" style="display: none;">
+                        <img id="sound-mixing" src="{% static 'image/img28.jpg' %}" class="img-fluid" alt="Sound Mixing">
+                        <img id="voice-recording" src="{% static 'image/img32.jpg' %}" class="img-fluid" alt="Voice Recording">
+                        <img id="track-mastering" src="{% static 'image/img31.jpg' %}" class="img-fluid" alt="Track Mastering">
+                        <img id="audio-editing" src="{% static 'image/img51.jpg' %}" class="img-fluid" alt="Audio Editing">
+                        <img id="audio-restoration" src="{% static 'image/img51.jpg' %}" class="img-fluid" alt="Audio Restoration">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Our Team -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-5">
+                <div class="d-flex flex-column gap-3 justify-content-center align-items-center mx-auto text-center scrollanimation animated zoomIn"
+                    style="max-width: 800px;">
+                    <h3>Meet the <span class="brush5">Minds Behind the</span> Music</h3>
+                    <p>Our team of talented musicians, producers, and creators is dedicated to supporting you in
+                        achieving your best work. With expertise and experience, we’re here to help you reach your full
+                        musical potential.</p>
+                </div>
+                <div class="tab-container team">
+                    <div class="tabs team col-xl-12">
+                        <div class="overflow-hidden">
+                            <div class="swiper swiperTestimonials">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab" data-tab="team-1">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="{% static 'image/1.jpeg' %}" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab active" data-tab="team-2">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="{% static 'image/2.jpeg' %}" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab" data-tab="team-3">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="{% static 'image/3.jpeg' %}" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab" data-tab="team-4">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="image/4.jpeg" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab" data-tab="team-5">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="{% static 'image/5.jpeg' %}" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide p-0">
+                                        <div class="tab" data-tab="team-6">
+                                            <div class="card card-overlay gap-3">
+                                                <div class="card-image overflow-hidden rounded-0 position-relative">
+                                                    <img src="{% static 'image/6.jpeg' %}" alt="" class="img-fluid">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex flex-column gap-2 h-100 w-100 text-white justify-content-end align-items-center">
+                                                            <div class="social-container mb-5"
+                                                                style="border-bottom-right-radius: 20px;">
+                                                                <a href="https://www.facebook.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                                                </a>
+                                                                <a href="https://www.twitter.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                                                </a>
+                                                                <a href="https://www.instagram.com" class="social-item">
+                                                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+             
+                </div>
+            </div>
+        </div>
+
+        <!-- Section CTA -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col mb-3 scrollanimation animated fadeInLeft">
+                        <div class="d-flex flex-column gap-3 pe-xl-5">
+                            <h3>Stay Tuned for the <span class="brush5">Latest Beats!</span></h3>
+                            <p>Subscribe now and never miss updates on new tracks, studio tips, and exclusive offers.
+                            </p>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                    <div id="liveToast"
+                                        class="toast success_msg_subscribe bg-dark-transparent text-white" role="alert"
+                                        aria-live="assertive" aria-atomic="true">
+                                        <div class="d-flex">
+                                            <div class="toast-body">
+                                                Your Subscribe Send Successfully!.
+                                            </div>
+                                            <button type="button" class="btn me-2 m-auto text-white"
+                                                data-bs-dismiss="toast" aria-label="Close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form
+                                        class="d-flex flex-column h-100 justify-content-center w-100 needs-validation form"
+                                        novalidate>
+                                        <input type="text" name="action" value="subscribe" hidden>
+                                        <div class="input-group gap-3 mb-xl-2 mb-0 position-relative">
+                                            <input type="email"
+                                                class="form-control rounded-0 mb-xl-0 mb-3 subscribe"
+                                                placeholder="Your E-mail" name="email" required>
+                                            <button
+                                                class="btn btn-accent submit_subscribe rounded-0 gap-2 px-4 py-3" type="submit"><i
+                                                    class="rtmicon rtmicon-arrow-right fw-bold"></i></button>
+                                            <div class="invalid-feedback text-white">
+                                                Please provide a valid email format (e.g.,
+                                                user@example.com).
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="social-container align-items-center mb-5 gap-3">
+                                <h5>Follow Us:</h5>
+                                <a href="https://www.facebook.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.twitter.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                </a>
+                                <a href="https://www.spotify.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-spotify"></i>
+                                </a>
+                                <a href="https://www.instagram.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                </a>
+                                <a href="https://music.apple.com" class="social-item-2">
+                                    <i class="fa-solid fa-xs fa-music"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 scrollanimation animated fadeInRight">
+                        <img src="{% static 'image/dummy-img-600x500.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

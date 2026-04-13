@@ -1,0 +1,663 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.2/animation_utility.css">
+    <link rel="icon" type="image/x-icon" href="image/logo5.png">
+    <title>MK Production</title>
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+</head>
+<body>
+    <div id="header" class="fixed-top bg-accent-transparent">
+        <nav class="navbar navbar-expand-xl mx-5">
+            <div class="container-fluid ps-3">
+                <div class="logo-container">
+                    <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'image/logo5.png' %}" alt="" class="img-fluid" style="width: 40% !important;"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered accent-color-2"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-xl-5 ps-xl-5 me-auto mb-2 mb-xl-0 gap-xl-4 gap-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="{% url 'about_us' %}">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'services' %}">Services</a></li>
+                                <li><a class="dropdown-item" href="{% url 'service_detail' %}">Service Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Explore
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{% url 'studio' %}">Studio</a></li>
+                                <li><a class="dropdown-item" href="{% url 'studio_detail' %}">Studio Detail</a></li>
+                                <li><a class="dropdown-item" href="{% url 'faq' %}">FAQs</a></li>
+                                <li><a class="dropdown-item" href="{% url 'appointment' %}">Appointment</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="{% url 'contact' %}">Contact Us</a>
+                        </li>
+                    </ul>
+                    <!-- <div id="guest-view" class="d-flex flex-row gap-3 w-max-content justify-content-center">
+                        <div class="border-end pe-3">
+                            <a href="/login-page/" class="link d-flex flex-row gap-3 align-items-center">
+                                LOGIN
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/signup-page/" class="link d-flex flex-row gap-3 align-items-center">
+                                SIGNUP
+                            </a>
+                        </div>
+                        <div>
+                            <div id="user-view" style="display:none;">
+                                <span id="username-display"></span>
+                                <button onclick="logout()">Logout</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div id="guest-view" 
+                        class="d-flex align-items-center justify-content-center gap-4">
+                        <div class="border-end pe-3">
+                            <a href="/login-page/" class="link text-decoration-none">
+                                LOGIN
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/signup-page/" class="link text-decoration-none">
+                                SIGNUP
+                            </a>
+                        </div>
+                        <div id="user-view" class="d-flex align-items-center gap-3" style="display:none;">
+                            <span id="username-display" class="fw-semibold"></span>
+                            <button onclick="logout()" class="btn btn-sm btn-outline-danger">
+                                Logout
+                            </button>
+                        </div>
+                    </div> -->
+                <!-- <div id="guest-view">
+                    <a href="/login-page/">LOGIN</a>
+                    <a href="/signup-page/">SIGNUP</a>
+                </div>
+
+                <div id="user-view" style="display:none;">
+                    <span id="username-display"></span>
+                    <button onclick="logout()">Logout</button>
+                </div> -->
+                <div class="d-flex align-items-center justify-content-center gap-4">
+
+                <!-- Guest View -->
+                <div id="guest-view" class="d-flex align-items-center gap-4">
+                    <div class="border-end pe-3">
+                        <a href="/login-page/" class="link text-decoration-none">LOGIN</a>
+                    </div>
+                    <div>
+                        <a href="/signup-page/" class="link text-decoration-none">SIGNUP</a>
+                    </div>
+                </div>
+
+                <!-- User View -->
+                <div id="user-view" class="d-flex align-items-center gap-3 d-none">
+                    <span id="username-display" class="fw-semibold"></span>
+                    <button onclick="logout()" class="logout-btn">
+                        Logout
+                    </button>
+                </div>
+            </div>
+                </div>
+            </div>
+            <!-- <div id="auth-section">
+                <div id="user-view" style="display:none;">
+                    <span id="username-display"></span>
+                    <button onclick="logout()">Logout</button>
+                </div>
+            </div> -->
+        </nav>
+    </div>
+
+        {% block content %}{% endblock %}
+
+        <!-- <script>
+            function checkAuth() {
+                const token = localStorage.getItem("access");
+
+                if (token) {
+                    document.getElementById("guest-view").style.display = "none";
+                    document.getElementById("user-view").style.display = "block";
+
+                    const payload = JSON.parse(atob(token.split('.')[1]));
+                    document.getElementById("username-display").innerText = payload.username || "User";
+
+                } else {
+                    document.getElementById("guest-view").style.display = "block";
+                    document.getElementById("user-view").style.display = "none";
+                }
+            }
+
+            function logout() {
+                localStorage.removeItem("access");
+                localStorage.removeItem("refresh");
+
+                window.location.href = "/login-page/";
+            }
+
+            checkAuth();
+            </script> -->
+            <script>
+document.addEventListener("DOMContentLoaded", function () {
+    checkAuth();
+});
+
+function parseJwt(token) {
+    try {
+        return JSON.parse(atob(token.split('.')[1]));
+    } catch (e) {
+        return null;
+    }
+}
+
+function checkAuth() {
+    const token = localStorage.getItem("access");
+
+    const guestView = document.getElementById("guest-view");
+    const userView = document.getElementById("user-view");
+
+    if (token) {
+        guestView.classList.add("d-none");
+        userView.classList.remove("d-none");
+
+        const payload = parseJwt(token);
+
+        document.getElementById("username-display").innerText =
+            payload?.username || payload?.email || "User";
+
+    } else {
+        guestView.classList.remove("d-none");
+        userView.classList.add("d-none");
+    }
+}
+
+function logout() {
+    localStorage.removeItem("access");
+    localStorage.removeItem("refresh");
+    location.reload();
+}
+// document.addEventListener("DOMContentLoaded", function () {
+//     checkAuth();
+// });
+
+// function parseJwt(token) {
+//     try {
+//         return JSON.parse(atob(token.split('.')[1]));
+//     } catch (e) {
+//         return null;
+//     }
+// }
+
+// function checkAuth() {
+//     const token = localStorage.getItem("access");
+
+//     const guestView = document.getElementById("guest-view");
+//     const userView = document.getElementById("user-view");
+
+//     console.log("TOKEN:", token); // 👈 debug
+
+//     if (token && guestView && userView) {
+//         guestView.style.display = "none";
+//         userView.style.display = "flex";
+
+//         const payload = parseJwt(token);
+//         console.log("PAYLOAD:", payload); // 👈 debug
+
+//         document.getElementById("username-display").innerText =
+//             payload?.username || payload?.email || "User";
+
+//     } else {
+//         guestView.style.display = "flex";
+//         userView.style.display = "none";
+//     }
+// }
+
+// function logout() {
+//     localStorage.removeItem("access");
+//     localStorage.removeItem("refresh");
+//     location.reload(); // better than redirect for testing
+// }
+// function parseJwt(token) {
+                //     try {
+                //         return JSON.parse(atob(token.split('.')[1]));
+                //     } catch (e) {
+                //         return null;
+                //     }
+                // }
+
+                // function checkAuth() {
+                //     const token = localStorage.getItem("access");
+
+                //     if (token) {
+                //         document.getElementById("guest-view").style.display = "none";
+                //         document.getElementById("user-view").style.display = "block";
+
+                //         const payload = parseJwt(token);
+
+                //         document.getElementById("username-display").innerText =
+                //             payload?.username || payload?.email || "User";
+
+                //     } else {
+                //         document.getElementById("guest-view").style.display = "block";
+                //         document.getElementById("user-view").style.display = "none";
+                //     }
+                // }
+
+                // function logout() {
+                //     localStorage.removeItem("access");
+                //     localStorage.removeItem("refresh");
+                //     window.location.href = "/login-page/";
+                // }
+
+                // checkAuth();
+            </script>
+        <footer>
+            <div class="section pb-0 pt-5 position-relative border-top border-accent" style="height: 90vh;">
+                <div class="d-flex flex-column gap-3 h-100">
+                    <div class="row row-cols-xl-2 row-cols-1 h-100">
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3 justify-content-between h-100">
+                                <div class="d-flex flex-row gap-5">
+                                    <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                                        <i class="rtmicon rtmicon-location"></i>
+                                        SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh
+                                    </a>
+                                    <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                                        <i class="rtmicon rtmicon-classic-phone"></i>
+                                        +91 8360000717
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column gap-3">
+                                    <h5>Tags</h5>
+                                    <hr class="m-0" style="max-width: 300px;">
+                                    <div class="d-flex flex-row gap-2">
+                                        <span class="tags">artists</span>
+                                        <span class="tags active">audio</span>
+                                        <span class="tags">instrument</span>
+                                        <span class="tags">studio</span>
+                                    </div>
+                                    <div class="d-flex flex-row gap-2">
+                                        <span class="tags">music</span>
+                                        <span class="tags">beat</span>
+                                        <span class="tags">song</span>
+                                        <span class="tags">performance</span>
+                                    </div>
+                                    <div class="d-flex flex-row gap-2">
+                                        <span class="tags">playlist</span>
+                                        <span class="tags">album</span>
+                                        <span class="tags">lyrics</span>
+                                        <span class="tags">record</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <img src="{% static 'image/logo5.png' %}" alt="" class="img-fluid" width="250">
+                                    <div class="d-flex flex-xl-row flex-column">
+                                        <div class="border-end border-accent pe-4">
+                                            <a href="" class="read-more">
+                                                Home
+                                            </a>
+                                        </div>
+                                        <div class="border-end border-accent px-4">
+                                            <a href="" class="read-more">
+                                                About Us
+                                            </a>
+                                        </div>
+                                        <div class="border-end border-accent px-4">
+                                            <a href="" class="read-more">
+                                                Services
+                                            </a>
+                                        </div>
+                                        <div class="border-end border-accent px-4">
+                                            <a href="" class="read-more">
+                                                Blog
+                                            </a>
+                                        </div>
+                                        <div class="px-4">
+                                            <a href="" class="read-more">
+                                                Pages
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3 w-100 justify-content-between align-items-end">
+                                <div class="social-container mb-5 gap-3">
+                                    <a href="https://www.facebook.com" class="social-item-2">
+                                        <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://www.twitter.com" class="social-item-2">
+                                        <i class="fa-brands fa-xs fa-twitter"></i>
+                                    </a>
+                                    <a href="https://www.spotify.com" class="social-item-2">
+                                        <i class="fa-brands fa-xs fa-spotify"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com" class="social-item-2">
+                                        <i class="fa-brands fa-xs fa-instagram"></i>
+                                    </a>
+                                    <a href="https://music.apple.com" class="social-item-2">
+                                        <i class="fa-solid fa-xs fa-music"></i>
+                                    </a>
+                                </div>
+                                <div class="d-flex flex-column w-100">
+                                    <div class="d-flex flex-column" style="align-self: end;">
+                                        <p>Get Contact</p>
+                                        <p class="fw-normal">middukheraproduction@gmail.com</p>
+                                    </div>
+                                    <div class="overflow-hidden" style="max-width: 500px; align-self: end;">
+                                        <div class="swiper swiperImage scrollanimation animated fadeInDown">
+                                            <!-- Additional required wrapper -->
+                                            <div class="swiper-wrapper">
+                                                <!-- Slides -->
+                                                <div class="swiper-slide">
+                                                    <div class="image-footer">
+                                                        <img src="{% static 'image/img19 (1).jpg' %}" class="img-fluid" width="108"
+                                                            style="aspect-ratio: 1/1;" alt="">
+                                                        <div class="image-footer-blur"></div>
+                                                        <div class="image-zoom">
+                                                            <div
+                                                                class="d-flex flex-column gap-2 h-100 align-items-center justify-content-center accent-color">
+                                                                <!-- <a href="image/dummy-img-400x400.jpg" data-fslightbox="gallery"
+                                                                    class="social-item p-3">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                </a> -->
+                                                                <span class="small-text">Retro Vintage</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="image-footer">
+                                                        <img src="{% static 'image/img20.jpg' %}" class="img-fluid" width="108"
+                                                            style="aspect-ratio: 1/1;" alt="">
+                                                        <div class="image-footer-blur"></div>
+                                                        <div class="image-zoom">
+                                                            <div class="d-flex flex-column gap-2 h-100 align-items-center justify-content-center accent-color">
+                                                                <!-- <a href="image/dummy-img-400x400.jpg" data-fslightbox="gallery"
+                                                                    class="social-item p-3">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                </a> -->
+                                                                <span class="small-text">Retro Vintage</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="image-footer">
+                                                        <img src="{% static 'image/img21.jpg' %}" class="img-fluid" width="108"
+                                                            style="aspect-ratio: 1/1;" alt="">
+                                                        <div class="image-footer-blur"></div>
+                                                        <div class="image-zoom">
+                                                            <div
+                                                                class="d-flex flex-column gap-2 h-100 align-items-center justify-content-center accent-color">
+                                                                <!-- <a href="image/dummy-img-400x400.jpg" data-fslightbox="gallery"
+                                                                    class="social-item p-3">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                </a> -->
+                                                                <span class="small-text">Retro Vintage</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="image-footer">
+                                                        <img src="{% static 'image/img22.jpg' %}" class="img-fluid" width="108"
+                                                            style="aspect-ratio: 1/1;" alt="">
+                                                        <div class="image-footer-blur"></div>
+                                                        <div class="image-zoom">
+                                                            <div
+                                                                class="d-flex flex-column gap-2 h-100 align-items-center justify-content-center accent-color">
+                                                                <!-- <a href="image/dummy-img-400x400.jpg" data-fslightbox="gallery"
+                                                                    class="social-item p-3">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                </a> -->
+                                                                <span class="small-text">Retro Vintage</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="image-footer">
+                                                        <img src="{% static 'image/img23.jpg' %}" class="img-fluid" width="108"
+                                                            style="aspect-ratio: 1/1;" alt="">
+                                                        <div class="image-footer-blur"></div>
+                                                        <div class="image-zoom">
+                                                            <div
+                                                                class="d-flex flex-column gap-2 h-100 align-items-center justify-content-center accent-color">
+                                                                <!-- <a href="image/dummy-img-400x400.jpg" data-fslightbox="gallery"
+                                                                    class="social-item p-3">
+                                                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                                                </a> -->
+                                                                <span class="small-text">Retro Vintage</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-xl-row flex-column gap-2 align-items-center justify-content-between pb-4">
+                        <span class="text-color-2 fs-6 font-2">
+                            Copyright © 2025 MK PRODUCTION. All Rights Reserved.
+                        </span>
+                        <div class="d-flex flex-xl-row flex-column gap-3">
+                            <div class="border-end pe-3">
+                                <a href="" class="read-more d-flex flex-row gap-3 align-items-center">
+                                    Terms Of Use
+                                </a>
+                            </div>
+                            <div>
+                                <a href="" class="read-more d-flex flex-row gap-3 align-items-center">
+                                    Privacy Notice
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+
+<script>
+// async function payStudio(amount, studioName) {
+//     console.log("Clicked:", amount, studioName); // DEBUG
+
+//     try {
+//         const res = await fetch('/create-order/', {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify({
+//                 amount: amount,
+//                 studio: studioName
+//             })
+//         });
+
+//         const data = await res.json();
+//         console.log("Response:", data);
+
+//         if (!data.payment_session_id) {
+//             alert("Payment session error");
+//             return;
+//         }
+
+//         const cashfree = Cashfree({
+//             mode: "sandbox"
+//         });
+
+//         cashfree.checkout({
+//             paymentSessionId: data.payment_session_id,
+//             redirectTarget: "_self"
+//         });
+
+//     } catch (err) {
+//         console.error(err);
+//         alert("Payment failed");
+//     }
+// }
+
+// async function payStudio(amount, studioName) {
+
+//     const token = localStorage.getItem("access");
+
+//     if (!token) {
+//         alert("Please login first");
+//         window.location.href = "/login-page/";
+//         return;
+//     }
+
+//     const res = await fetch('/create-order/', {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json",
+//             "Authorization": "Bearer " + token
+//         },
+//         body: JSON.stringify({
+//             amount: amount,
+//             studio: studioName
+//         })
+//     });
+
+//     const data = await res.json();
+
+//     if (!data.payment_session_id) {
+//         alert("Payment error");
+//         console.log(data);
+//         return;
+//     }
+
+//     const cashfree = Cashfree({ mode: "sandbox" });
+
+//     cashfree.checkout({
+//         paymentSessionId: data.payment_session_id,
+//         redirectTarget: "_self"
+//     });
+// }
+
+async function payStudio(amount, studioName) {
+
+    const token = localStorage.getItem("access");
+
+    if (!token) {
+        alert("Please login first");
+        window.location.href = "/login-page/";
+        return;
+    }
+
+    const res = await fetch('/create-order/', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token
+        },
+        body: JSON.stringify({
+            amount: amount, 
+            studio: studioName
+        })
+    });
+
+    const data = await res.json();
+
+    console.log("SESSION:", data.payment_session_id);
+
+    if (!data.payment_session_id) {
+        alert("Payment error");
+        console.log(data);
+        return;
+    }
+
+    const cashfree = Cashfree({ mode: "production" });
+
+    cashfree.checkout({
+        paymentSessionId: data.payment_session_id,
+        redirectTarget: "_self"
+    });
+}
+</script>
+
+<script>
+async function checkPayment() {
+    const token = localStorage.getItem("access");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const order_id = urlParams.get("order_id");
+
+    const res = await fetch(`/verify-payment/?order_id=${order_id}`, {
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    const data = await res.json();
+
+    if (data.status === "PAID") {
+        document.getElementById("msg").innerText = "✅ Payment Successful";
+    } else {
+        document.getElementById("msg").innerText = "⏳ Payment Pending...";
+    }
+}
+
+checkPayment();
+
+if (isLoggedIn) {
+    document.querySelectorAll('#guest-view > div:nth-child(1), #guest-view > div:nth-child(2)')
+        .forEach(el => el.style.display = 'none');
+
+    document.getElementById('user-view').style.display = 'flex';
+}
+
+</script>
+
+<h2 id="msg">Checking payment...</h2>
+    <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+    <script src="{% static 'js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/vendor/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/swiper-script.js' %}"></script>
+    <script src="{% static 'js/submit-form.js' %}"></script>
+    <script src="{% static 'js/vendor/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/video_embedded.js' %}"></script>
+    <script src="{% static 'js/vendor/fslightbox.js' %}"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+

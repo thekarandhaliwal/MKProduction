@@ -1,0 +1,128 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Xmee | Login and Register Form Html Templates</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'image/favicon.png' %}">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- Fontawesome CSS -->
+	<link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+	<!-- Flaticon CSS -->
+	<link rel="stylesheet" href="{% static 'font/flaticon.css' %}">
+	<!-- Google Web Fonts -->
+	<link href="../../../../fonts.googleapis.com/css89ea.css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="preloader" class="preloader">
+        <div class='inner'>
+            <div class='line1'></div>
+            <div class='line2'></div>
+            <div class='line3'></div>
+        </div>
+    </div>
+	<div id="wrapper" class="wrapper">
+		<div class="fxt-template-animation fxt-template-layout5">
+			<div class="fxt-bg-img fxt-none-767" data-bg-image="{% static 'image/img30.jpg' %}">
+				<div class="fxt-intro">
+					<div class="sub-title">Welcome To</div>
+					<h1 style="font-size: 30px !important;">Middu Khera Production</h1>
+					<p>We transform raw ideas into studio-quality tracks</p>
+				</div>
+			</div>
+			<div class="fxt-bg-color">
+				<div class="fxt-header">
+					<a href="/login-page/" class="fxt-logo"><img src="{% static 'image/logo-5.png' %}" alt="Logo"></a>
+					<div class="fxt-page-switcher">
+						<a href="/login-page/" class="switcher-text switcher-text1">LogIn</a>
+						<a href="/signup-page/" class="switcher-text switcher-text2 active">Register</a>
+					</div>
+				</div>
+				<div class="fxt-form">
+    				<form onsubmit="event.preventDefault(); signup();">
+						<div class="form-group fxt-transformY-50 fxt-transition-delay-1">
+							<input type="text" id="username" class="form-control" name="name" placeholder="Full Name" required="required">
+							<i class="flaticon-user"></i>
+						</div>
+						<div class="form-group fxt-transformY-50 fxt-transition-delay-2">
+							<input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required="required">
+							<i class="flaticon-envelope"></i>
+						</div>
+						<div class="form-group fxt-transformY-50 fxt-transition-delay-3">
+							<input type="password" id="password" class="form-control" name="password" placeholder="Password" required="required">
+							<i class="flaticon-padlock"></i>
+						</div>
+						<div class="form-group fxt-transformY-50 fxt-transition-delay-4">
+							<div class="fxt-content-between">
+								<button type="submit" class="fxt-btn-fill">Register</button>
+								<div class="checkbox">
+									<input id="checkbox1" type="checkbox">
+									<label for="checkbox1">I agree the terms of services</label>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<p id="msg"></p>
+				<div class="fxt-footer">
+					<ul class="fxt-socials">
+						<li class="fxt-facebook fxt-transformY-50 fxt-transition-delay-6"><a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+						<li class="fxt-twitter fxt-transformY-50 fxt-transition-delay-7"><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+						<li class="fxt-google fxt-transformY-50 fxt-transition-delay-8"><a href="#" title="google"><i class="fab fa-google-plus-g"></i></a></li>
+						<li class="fxt-linkedin fxt-transformY-50 fxt-transition-delay-9"><a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+						<li class="fxt-pinterest fxt-transformY-50 fxt-transition-delay-9"><a href="#" title="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- jquery-->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- Bootstrap js -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Imagesloaded js -->
+	<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+	<!-- Validator js -->
+	<script src="{% static 'js/validator.min.js' %}"></script>
+	<!-- Custom Js -->
+	<script src="{% static 'js/main.js' %}"></script>
+<script>
+async function signup() {
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const res = await fetch("/signup/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ username, email, password })
+    });
+
+    const data = await res.json();
+
+    if (res.status === 201) {
+        document.getElementById("msg").innerText = "Signup successful";
+        window.location.href = "/login-page/";
+    } else {
+        document.getElementById("msg").innerText = data.error || "Signup failed";
+    }
+}
+</script>
+</body>
+
+
+</html>

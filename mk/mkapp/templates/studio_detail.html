@@ -1,0 +1,308 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <main>
+        <div class="section pt-0">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="position-relative bg-attach-cover" style="background-image: url('{% static "image/img34.jpg" %}');">
+                    <div class="d-flex flex-column text-white scrollanimation animated fadeInLeft" style="max-width: 700px;">
+                        <div class="pe-5 pt-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Studio</span>
+                        </div>
+                        <div class="pe-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Recording</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-xl-row flex-column gap-3 justify-content-between">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Studio Recording</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-xl-row flex-column gap-5">
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-location"></i>
+                            SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh
+
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-envelope"></i>
+                            middukheraproduction@gmail.com
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-classic-phone"></i>
+                            +91 8360000717
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Studio Detail -->
+        <div class="section">
+            <div class="r-container">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col col-xl-8 scrollanimation animated fadeInLeft">
+                        <div class="d-flex flex-column gap-4 pe-xl-5">
+                            <div class="image-container">
+                                <img src="{% static 'image/img34.jpg' %}" class="img-fluid" alt="">
+                                
+                                <!-- Hotspots -->
+                                <div class="hotspot" style="top: 55%; left: 60%;" data-text="DrumMaster 550">
+                                    <i class="rtmicon rtmicon-pluss"></i>
+                                </div>
+                                <div class="hotspot" style="top: 40%; left: 32%;" data-text="Amplifier 200W">
+                                    <i class="rtmicon rtmicon-pluss"></i>
+                                </div>
+                                <div class="hotspot" style="top: 50%; left: 85%;" data-text="Speaker System">
+                                    <i class="rtmicon rtmicon-pluss"></i>
+                                </div>
+                                <div class="hotspot" style="top: 45%; left: 25%;" data-text="Microphone Set">
+                                    <i class="rtmicon rtmicon-pluss"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="row row-cols-xl-2 row-cols-1">
+                                    <div class="col col-xl-7 mb-3">
+                                        <div class="d-flex-flex-column gap-3">
+                                            <h3>Studio 1 - <span class="accent-color">Recording</span></h3>
+                                            <div class="d-flex flex-row gap-4">
+                                                <div class="d-flex flex-row gap-2 align-items-center">
+                                                    <i class="rtmicon rtmicon-house-plan"></i>
+                                                    <span class="text-color-2">350 sqft</span>
+                                                </div>
+                                                <div class="d-flex flex-row gap-2 align-items-center">
+                                                    <i class="rtmicon rtmicon-user-group"></i>
+                                                    <span class="text-color-2">6 people</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-xl-5 mb-3">
+                                        <div class="d-flex flex-column">
+                                            <p>Price</p>
+                                            <div class="d-flex flex-row align-items-end">
+                                                <span class="price-text2 accent-color">starts - 10,000</span>
+                                                <h5 class="mb-3">/hour</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <p>
+                                        Our Recording Studio is designed for artists who seek top-tier sound quality.
+                                        With state-of-the-art equipment and acoustically treated spaces, Studio 1
+                                        ensures every recording, from vocals to instruments, captures the finest details
+                                        with clarity and precision. Whether you're working solo or with a full band, our
+                                        studio provides the perfect environment for creativity and exceptional
+                                        performances.
+
+                                    </p>
+                                    <p>
+                                        The space is designed for maximum comfort and functionality, featuring high-end
+                                        microphones, monitors, and audio interfaces to bring your vision to life. Our
+                                        experienced sound engineers are on hand to guide you through the process,
+                                        ensuring your recordings sound as good as they feel. Whether you're tracking,
+                                        mixing, or mastering, Studio 1 has everything you need to create your best work.
+                                    </p>
+                                    <hr>
+                                    <h4>Studio Equipment</h4>
+                                    <ul class="list list-style-accent gap-3">
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Microphones : Model C900 (1 unit, for vocal and
+                                                    instrument recording)</p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Audio Interface : Twin Pro X (1 unit, 2 input channels)
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Monitors : StudioMax 8 (2 units, stereo output)</p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Mixing Console : CompactMix 8 (1 unit, 8 channels with EQ
+                                                    and routing)</p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">DAW : Pro Studio X (1 unit, multi-track recording
+                                                    software)</p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Headphones : SoundMax 700 (2 pieces, stereo)</p>
+                                            </div>
+                                        </li>
+                                        <li class="justify-content-center">
+                                            <div class="d-flex flex-row gap-3 align-items-center">
+                                                <i class="fa-solid fa-check accent-color"></i>
+                                                <p class="m-0">Drum Kit : DrumMaster 550 (1 set, essential for live drum
+                                                    recordings)</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <h4>Studio Gallery</h4>
+                                <div class="row row cols-xl-2 row cols-1">
+                                    <div class="col mb-3">
+                                        <a href="{% static 'image/img35.jpg' %}" data-fslightbox="gallery">
+                                            <img src="{% static 'image/img35.jpg' %}" class="img-fluid h-100" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <div class="d-flex flex-column gap-3 h-100">
+                                            <a href="{% static 'image/img36 (1).jpg' %}" data-fslightbox="gallery">
+                                                <img src="{% static 'image/img36 (1).jpg' %}" class="img-fluid h-100 w-100" alt="">
+                                            </a>
+                                            <div class="d-flex flex-xl-row flex-column gap-3 h-100">
+                                                <div class="col mb-xl-0 mb-3">
+                                                    <a href="{% static 'image/img37.jpg' %}" data-fslightbox="gallery">
+                                                        <img src="{% static 'image/img37.jpg' %}" class="img-fluid h-100" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="col mb-xl-0 mb-3">
+                                                    <a href="{% static 'image/img38.jpg' %}" data-fslightbox="gallery">
+                                                        <img src="{% static 'image/img38.jpg' %}" class="img-fluid h-100" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 scrollanimation animated fadeInRight">
+                        <div class="d-flex flex-column gap-5 ps-xl-2">
+                            <div class="d-flex flex-column gap-3 w-100 p-5 bg-accent">
+                                <h4>Book This Studio</h4>
+                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                    <div id="liveToastAppointment"
+                                        class="toast success_msg_appointment bg-dark-transparent text-white"
+                                        role="alert" aria-live="assertive" aria-atomic="true">
+                                        <div class="d-flex">
+                                            <div class="toast-body">
+                                                Your Appointment Message Send Successfully!.
+                                            </div>
+                                            <button type="button" class="btn me-2 m-auto text-white"
+                                                data-bs-dismiss="toast" aria-label="Close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form class="d-flex flex-column gap-1 h-100 justify-content-center w-100 needs-validation form" novalidate>
+                                    <input type="text" name="action" value="appointment" hidden>
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Full Name<span
+                                                class="accent-color">*</span></label>
+                                        <input type="text" class="form-control py-3 px-4" name="name" id="name"
+                                            placeholder="Your Full Name" required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number<span
+                                                class="accent-color">*</span></label>
+                                        <input type="tel" class="form-control py-3 px-4" name="phone" id="phone"
+                                            placeholder="Your Number Phone" required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="date" class="form-label">Resevation Date<span
+                                                class="accent-color">*</span></label>
+                                        <input type="date" class="form-control py-3 px-4" name="date" id="date"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="duration" class="form-label">Duration of Session<span class="accent-color">*</span></label>
+                                        <div class="mb-3">
+                                            <select name="duration" id="duration" class="form-control form-select py-3 px-4" required>
+                                                <option value="" selected>Select Your Duration</option>
+                                                <option value="1">1 Hour</option>
+                                                <option value="2">2 Hour</option>
+                                                <option value="3">3 Hour</option>
+                                                <option value="4">4 Hour</option>
+                                                <option value="5">5 Hour</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="studio" class="form-label">Studio Selection<span class="accent-color">*</span></label>
+                                        <div class="mb-3">
+                                            <select name="studio" id="studio" class="form-control form-select py-3 px-4"
+                                                required>
+                                                <option value="" selected>Select Your Studio</option>
+                                                <option value="1">Studio 1</option>
+                                                <option value="2">Studio 2</option>
+                                                <option value="3">Studio 3</option>
+                                                <option value="4">Studio 4</option>
+                                                <option value="5">Studio 5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message<span
+                                                class="accent-color">*</span></label>
+                                        <textarea class="form-control py-3 px-4" id="message" name="message" rows="4"
+                                            placeholder="Your Message"></textarea>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-accent submit_appointment d-flex justify-content-center gap-2 rounded-0">
+                                            <span>Submit</span> 
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="d-flex flex-column gap-3 p-5 bg-accent">
+                                <h4>Book Your Creative Space Now</h4>
+                                <p>Secure the perfect environment for your next recording session today.</p>
+                                <div class="d-flex flex-column gap-3">
+                                    <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                                        <i class="rtmicon rtmicon-location"></i>
+                                        SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh
+                                    </a>
+                                    <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                                        <i class="rtmicon rtmicon-envelope"></i>
+                                        middukheraproduction@gmail.com
+                                    </a>
+                                    <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                                        <i class="rtmicon rtmicon-classic-phone"></i>
+                                        +91 8360000717
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

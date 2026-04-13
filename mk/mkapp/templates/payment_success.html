@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="msg">Checking payment...</h2>
+
+<script>
+async function checkPayment() {
+    const token = localStorage.getItem("access");
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const order_id = urlParams.get("order_id");
+
+    if (!order_id) {
+        document.getElementById("msg").innerText = "Invalid order";
+        return;
+    }
+
+    const res = await fetch(`/verify-payment/?order_id=${order_id}`, {
+        headers: {
+            "Authorization": "Bearer " + token
+        }
+    });
+
+    const data = await res.json();
+
+    if (data.status === "PAID") {
+        document.getElementById("msg").innerText = "✅ Payment Successful 🎉";
+    } else if (data.status === "FAILED") {
+        document.getElementById("msg").innerText = "❌ Payment Failed";
+    } else {
+        document.getElementById("msg").innerText = "⏳ Payment Processing...";
+        
+        // retry after 3 sec
+        setTimeout(checkPayment, 3000);
+    }
+}
+
+checkPayment();
+</script>
+</body>
+</html>

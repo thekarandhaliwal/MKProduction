@@ -1,0 +1,385 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- Main -->
+    <main>
+        <!-- Banner -->
+        <div class="section pt-0">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="position-relative bg-attach-cover" style="background-image: url('{% static "image/img17.jpg" %}');">
+                    <div class="d-flex flex-column text-white scrollanimation animated fadeInLeft"
+                        style="max-width: 700px;">
+                        <div class="pe-5 pt-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Our</span>
+                        </div>
+                        <div class="pe-5 bg-accent-primary" style="width: max-content;">
+                            <span class="text-banner">Studio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-xl-row flex-column gap-3 justify-content-between">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Our Studio</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex flex-xl-row flex-column gap-5">
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-location"></i>
+                            KLLG St, No.99, Pku City, ID 28289
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-envelope"></i>
+                            middukheraproduction@gmail.com
+                        </a>
+                        <a href="" class="read-more d-flex flex-row gap-2 align-items-center">
+                            <i class="rtmicon rtmicon-classic-phone"></i>
+                            0761-8523-398
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Fasilitation -->
+        <div class="section bg-attach-cover" style="background-image: url('{% static "image/dummy-img-1920x900.jpg" %}');">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="d-flex flex-column gap-3 align-items-center justify-content-center mx-auto text-center scrollanimation animated zoomIn"
+                    style="max-width: 600px;">
+                    <h3 class="brush2">Choose Your Studio</h3>
+                    <p>Select the perfect studio space for your project, whether it's for recording, mixing, or
+                        mastering, with options to suit different production styles and needs.</p>
+                </div>
+                <div class="tab-container h-100 position-relative">
+                    <div class="tabs studio">
+                        <div class="tab" data-tab="studio-1">Studio 1 - Recording</div>
+                        <div class="tab" data-tab="studio-2">Studio 2 - Mixing</div>
+                        <div class="tab" data-tab="studio-3">Studio 3 - Mastering</div>
+                        <div class="tab active" data-tab="studio-4">Studio 4 - Music</div>
+                        <div class="tab" data-tab="studio-5">Studio 5 - Production</div>
+                    </div>
+                    <div class="tab-content studio">
+                        <div class="content" id="studio-1">
+                            <div class="row row-cols-xl-2 row-cols-1 ps-xl-3">
+                                <div class="col mb-3">
+                                    <img src="{% static 'image/img36.jpg' %}" class="img-fluid h-100" alt="">
+                                </div>
+                                <div class="col mb-3 scrollanimation animated fadeInRight">
+                                    <div class="d-flex flex-column gap-3 p-3">
+                                        <h4>Studio 1 - <span class="accent-color">Recording</span></h4>
+                                        <p class="m-0">Designed for recording audio, this studio provides a professional
+                                            environment for capturing high-quality sound. Ideal for music producers,
+                                            voiceovers, and podcast recordings.</p>
+                                        <div class="d-flex flex-row align-items-end">
+                                            <span class="price-text accent-color">₹50,000</span>
+                                            <!-- <h5 class="mb-3">/hour</h5> -->
+                                        </div>
+                                        <div class="d-flex flex-row gap-3">
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-house-plan"></i>
+                                                <span>350 sqft</span>
+                                            </div>
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-user-group"></i>
+                                                <span>6 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-max-content">
+                                            <a href="" class="btn btn-accent d-flex flex-row rounded-0 gap-2 px-5 py-3">
+                                                <span>Book Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="studio-2">
+                            <div class="row row-cols-xl-2 row-cols-1 ps-xl-3">
+                                <div class="col mb-3">
+                                    <img src="{% static 'image/img31.jpg' %}" class="img-fluid h-100" alt="">
+                                </div>
+                                <div class="col mb-3 scrollanimation animated fadeInRight">
+                                    <div class="d-flex flex-column gap-3 p-3">
+                                        <h4>Studio 2 - <span class="accent-color">Mixing</span></h4>
+                                        <p class="m-0">Studio 3 Mastering delivers high-quality audio refinement with
+                                            precision equipment and expert engineering. Designed for perfect sound
+                                            balance, it ensures your tracks.</p>
+                                        <div class="d-flex flex-row align-items-end">
+                                            <span class="price-text accent-color">₹75,000</span>
+                                            <!-- <h5 class="mb-3">/hour</h5> -->
+                                        </div>
+                                        <div class="d-flex flex-row gap-3">
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-house-plan"></i>
+                                                <span>450 sqft</span>
+                                            </div>
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-user-group"></i>
+                                                <span>9 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-max-content">
+                                            <a href="" class="btn btn-accent d-flex flex-row rounded-0 gap-2 px-5 py-3">
+                                                <span>Book Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="studio-3">
+                            <div class="row row-cols-xl-2 row-cols-1 ps-xl-3">
+                                <div class="col mb-3">
+                                    <img src="{% static 'image/img28.jpg' %}" class="img-fluid h-100" alt="">
+                                </div>
+                                <div class="col mb-3 scrollanimation animated fadeInRight">
+                                    <div class="d-flex flex-column gap-3 p-3">
+                                        <h4>Studio 3 - <span class="accent-color">Mastering</span></h4>
+                                        <p class="m-0">Studio 3 Mastering delivers high-quality audio refinement with
+                                            precision equipment and expert engineering. Designed for perfect sound
+                                            balance, it ensures your tracks.</p>
+                                        <div class="d-flex flex-row align-items-end">
+                                            <span class="price-text accent-color">₹15000</span>
+                                            <!-- <h5 class="mb-3">/hour</h5> -->
+                                        </div>
+                                        <div class="d-flex flex-row gap-3">
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-house-plan"></i>
+                                                <span>450 sqft</span>
+                                            </div>
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-user-group"></i>
+                                                <span>9 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-max-content">
+                                            <a href="" class="btn btn-accent d-flex flex-row rounded-0 gap-2 px-5 py-3">
+                                                <span>Book Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content active" id="studio-4">
+                            <div class="row row-cols-xl-2 row-cols-1 ps-xl-3">
+                                <div class="col mb-3">
+                                    <img src="{% static 'image/img36.jpg' %}" class="img-fluid h-100" alt="">
+                                </div>
+                                <div class="col mb-3 scrollanimation animated fadeInRight">
+                                    <div class="d-flex flex-column gap-3 p-3">
+                                        <h4>Studio 4 - <span class="accent-color">Music</span></h4>
+                                        <p class="m-0">Studio 4 Music is your creative haven, equipped with cutting-edge
+                                            technology
+                                            and a versatile space to bring your musical vision to life. Ideal for
+                                            recording, mixing, and producing exceptional sound.</p>
+                                        <div class="d-flex flex-row align-items-end">
+                                            <span class="price-text accent-color">₹20,000 to ₹95,000</span>
+                                            <!-- <h5 class="mb-3">/hour</h5> -->
+                                        </div>
+                                        <div class="d-flex flex-row gap-3">
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-house-plan"></i>
+                                                <span>450 sqft</span>
+                                            </div>
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-user-group"></i>
+                                                <span>9 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-max-content">
+                                            <a href="" class="btn btn-accent d-flex flex-row rounded-0 gap-2 px-5 py-3">
+                                                <span>Book Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" id="studio-5">
+                            <div class="row row-cols-xl-2 row-cols-1 ps-xl-3">
+                                <div class="col mb-3">
+                                    <img src="{% static 'image/img24.jpg' %}" class="img-fluid h-100" alt="">
+                                </div>
+                                <div class="col mb-3 scrollanimation animated fadeInRight">
+                                    <div class="d-flex flex-column gap-3 p-3">
+                                        <h4>Studio 5 - <span class="accent-color">Production</span></h4>
+                                        <p class="m-0">Studio 4 Music is your creative haven, equipped with cutting-edge
+                                            technology
+                                            and a versatile space to bring your musical vision to life. Ideal for
+                                            recording, mixing, and producing exceptional sound.</p>
+                                        <div class="d-flex flex-row align-items-end">
+                                            <span class="price-text accent-color">₹55,000</span>
+                                            <!-- <h5 class="mb-3">/hour</h5> -->
+                                        </div>
+                                        <div class="d-flex flex-row gap-3">
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-house-plan"></i>
+                                                <span>650 sqft</span>
+                                            </div>
+                                            <div class="d-flex flex-row gap-2 align-items-center">
+                                                <i class="rtmicon rtmicon-user-group"></i>
+                                                <span>10 people</span>
+                                            </div>
+                                        </div>
+                                        <div class="w-max-content">
+                                            <a href="" class="btn btn-accent d-flex flex-row rounded-0 gap-2 px-5 py-3">
+                                                <span>Book Now</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Feature -->
+        <div class="section">
+            <div class="r-container">
+                <div class="row row-cols-xl-4 row-cols-1 h-100">
+                    <div class="col mb-3 p-0 scrollanimation animated fadeInDown">
+                        <div class="card card-service h-100">
+                            <div class=" d-flex flex-column gap-3 text-center align-items-center">
+                                <img src="{% static 'image/logo1.png' %}" class="img-fluid" alt="">
+                                <h4>Best Equipment</h4>
+                                <p class="m-0">High-quality tools to bring your music vision to life with precision.
+                                </p>
+                                <div class="w-max-content">
+                                    <a href=""
+                                        class="btn btn-accent-underline d-flex flex-row rounded-0 gap-2 px-0 py-2">
+                                        <!-- <span>Read More</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 p-0 scrollanimation animated fadeInDown">
+                        <div class="card card-service h-100">
+                            <div class=" d-flex flex-column gap-3 text-center align-items-center">
+                                <img src="{% static 'image/logo2.png' %}" class="img-fluid" alt="">
+                                <h4>Sound Quality</h4>
+                                <p class="m-0">Delivering pristine audio that ensures your tracks sound</p>
+                                <div class="w-max-content">
+                                    <a href=""
+                                        class="btn btn-accent-underline d-flex flex-row rounded-0 gap-2 px-0 py-2">
+                                        <!-- <span>Read More</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 p-0 scrollanimation animated fadeInDown">
+                        <div class="card card-service h-100">
+                            <div class=" d-flex flex-column gap-3 text-center align-items-center">
+                                <img src="{% static 'image/logo3.png' %}" class="img-fluid" alt="">
+                                <h4>Real Instruments</h4>
+                                <p class="m-0">Bring your music to life with authentic sounds and skilled musicians.</p>
+                                <div class="w-max-content">
+                                    <a href=""
+                                        class="btn btn-accent-underline d-flex flex-row rounded-0 gap-2 px-0 py-2">
+                                        <!-- <span>Read More</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 p-0 scrollanimation animated fadeInDown">
+                        <div class="card card-service h-100">
+                            <div class=" d-flex flex-column gap-3 text-center align-items-center">
+                                <img src="{% static 'image/logo4.png' %}" class="img-fluid" alt="">
+                                <h4>Versatile Studios</h4>
+                                <p class="m-0">Choose studios tailored for diverse genres and production needs.</p>
+                                <div class="w-max-content">
+                                    <a href=""
+                                        class="btn btn-accent-underline d-flex flex-row rounded-0 gap-2 px-0 py-2">
+                                        <!-- <span>Read More</span> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section CTA -->
+        <div class="section">
+            <div class="r-container d-flex flex-column gap-3">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col mb-3 scrollanimation animated fadeInLeft">
+                        <div class="d-flex flex-column gap-3 pe-xl-5">
+                            <h3>Stay Tuned for the <span class="brush5">Latest Beats!</span></h3>
+                            <p>Subscribe now and never miss updates on new tracks, studio tips, and exclusive offers.
+                            </p>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                    <div id="liveToast"
+                                        class="toast success_msg_subscribe bg-dark-transparent text-white" role="alert"
+                                        aria-live="assertive" aria-atomic="true">
+                                        <div class="d-flex">
+                                            <div class="toast-body">
+                                                Your Subscribe Send Successfully!.
+                                            </div>
+                                            <button type="button" class="btn me-2 m-auto text-white"
+                                                data-bs-dismiss="toast" aria-label="Close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <form
+                                        class="d-flex flex-column h-100 justify-content-center w-100 needs-validation form"
+                                        novalidate>
+                                        <input type="text" name="action" value="subscribe" hidden>
+                                        <div class="input-group gap-3 mb-xl-2 mb-0 position-relative">
+                                            <input type="email"
+                                                class="form-control rounded-0 mb-xl-0 mb-3 subscribe"
+                                                placeholder="Your E-mail" name="email" required>
+                                            <button
+                                                class="btn btn-accent submit_subscribe rounded-0 gap-2 position-relative px-4 py-3"
+                                                style="z-index: 2;" type="submit"><i
+                                                    class="rtmicon rtmicon-arrow-right"></i></button>
+                                            <div class="invalid-feedback text-white">
+                                                Please provide a valid email format (e.g.,
+                                                user@example.com).
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="social-container align-items-center mb-5 gap-3">
+                                <h5>Follow Us:</h5>
+                                <a href="https://www.facebook.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.twitter.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-twitter"></i>
+                                </a>
+                                <a href="https://www.spotify.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-spotify"></i>
+                                </a>
+                                <a href="https://www.instagram.com" class="social-item-2">
+                                    <i class="fa-brands fa-xs fa-instagram"></i>
+                                </a>
+                                <a href="https://music.apple.com" class="social-item-2">
+                                    <i class="fa-solid fa-xs fa-music"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3 scrollanimation animated fadeInRight">
+                        <img src="{% static 'image/img27.jpg' %}" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% endblock %}

@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+        <div class="section position-relative mx-auto"
+            style="background-image: url('{% static "image/img23.jpg" %}'); max-width: 1770px; padding-top: 30rem;">
+            <div class="bg-overlay"></div>
+            <div class="r-container position-relative" style="z-index: 2;">
+                <div class="row row-cols-xl-2 row-cols-1">
+                    <div class="col p-0 mb-3">
+                        <div class="d-flex flex-column gap-3 position-relative justify-content-end h-100">
+                            <div class="bg-blur border-0"></div>
+                            <div class="position-relative p-5 d-flex flex-column gap-5" style="z-index: 2;">
+                                <h3>Secure Your Studio Session <span class="brush4">Today</span></h3>
+                                <div class="d-flex flex-column gap-4">
+                                    <div class="row row-cols-xl-2 row-cols-1">
+                                        <div class="col col-xl-3">
+                                            <p class="m-0">Address</p>
+                                        </div>
+                                        <div class="col col-xl-9">
+                                            <a href="" class="read-more">SCO- 487-488, Top Floor, Sector- 35 C, Chandigarh</a>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-xl-2 row-cols-1">
+                                        <div class="col col-xl-3">
+                                            <p class="m-0">Email</p>
+                                        </div>
+                                        <div class="col col-xl-9">
+                                            <a href="" class="read-more">middukheraproduction@gmail.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="row row-cols-xl-2 row-cols-1">
+                                        <div class="col col-xl-3">
+                                            <p class="m-0">Phone</p>
+                                        </div>
+                                        <div class="col col-xl-9">
+                                            <a href="" class="read-more">+91 8360000717</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col p-0 mb-3 scrollanimation animated fadeInRight" style="margin-top: -3rem;">
+                        <div class="d-flex flex-column w-100 p-5 bg-accent">
+                            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                                <div id="liveToastAppointment"
+                                    class="toast success_msg_appointment bg-dark-transparent text-white" role="alert"
+                                    aria-live="assertive" aria-atomic="true">
+                                    <div class="d-flex">
+                                        <div class="toast-body">
+                                            Your Appointment Message Send Successfully!.
+                                        </div>
+                                        <button type="button" class="btn me-2 m-auto text-white" data-bs-dismiss="toast"
+                                            aria-label="Close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <form
+                                class="d-flex flex-column gap-1 h-100 justify-content-center w-100 needs-validation form"
+                                novalidate>
+                                <input type="text" name="action" value="appointment" hidden>
+                                <div class="row row-cols-xl-2 row-cols-1">
+                                    <div class=" col mb-3">
+                                        <label for="name" class="form-label">Full Name<span
+                                                class="accent-color">*</span></label>
+                                        <input type="text" class="form-control py-3 px-4" name="name" id="name"
+                                            placeholder="Your Full Name" required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+
+                                    <div class="col mb-3">
+                                        <label for="phone" class="form-label">Phone Number<span
+                                                class="accent-color">*</span></label>
+                                        <input type="tel" class="form-control py-3 px-4" name="phone" id="phone"
+                                            placeholder="Your Number Phone" required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-xl-2 row-cols-1">
+                                    <div class="col mb-3">
+                                        <label for="date" class="form-label">Resevation Date<span
+                                                class="accent-color">*</span></label>
+                                        <input type="date" class="form-control py-3 px-4" name="date" id="date"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            The field is required.
+                                        </div>
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="duration" class="form-label">Duration of Session<span
+                                                class="accent-color">*</span></label>
+                                        <div class="mb-3">
+                                            <select name="duration" id="duration"
+                                                class="form-control form-select py-3 px-4" required>
+                                                <option value="" selected>Select Your Duration</option>
+                                                <option value="1">1 Hour</option>
+                                                <option value="2">2 Hour</option>
+                                                <option value="3">3 Hour</option>
+                                                <option value="4">4 Hour</option>
+                                                <option value="5">5 Hour</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="studio" class="form-label">Studio Selection<span
+                                            class="accent-color">*</span></label>
+                                    <div class="mb-3">
+                                        <select name="studio" id="studio" class="form-control form-select py-3 px-4"
+                                            required>
+                                            <option value="" selected>Select Your Studio</option>
+                                            <option value="1">Studio 1</option>
+                                            <option value="2">Studio 2</option>
+                                            <option value="3">Studio 3</option>
+                                            <option value="4">Studio 4</option>
+                                            <option value="5">Studio 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message<span
+                                            class="accent-color">*</span></label>
+                                    <textarea class="form-control py-3 px-4" id="message" name="message" rows="4"
+                                        placeholder="Your Message"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit"
+                                        class="btn btn-accent submit_appointment d-flex justify-content-center gap-2 rounded-0">
+                                        <span>Submit</span> 
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
